@@ -18,9 +18,9 @@ function createConfigPage() {
     <div class="container">
       <h1>View Config</h1>
       ${createCard("Drone ID", state.config.drone_id || "Loading...")}
-      ${createCard("Drone Name", state.config.drone_name || "Loading...")}
+      ${createCard("Drone Name", state.config.drone_name ? import.meta.env.VITE_CUSTOM_DRONE_NAME : "Loading...")}
       ${createCard("Light", state.config.light || "Loading...")}
-      ${createCard("Country", state.config.country || "Loading...")}
+      ${createCard("Country", state.config.country ? import.meta.env.VITE_CUSTOM_COUNTRY : "Loading...")}
     </div>
   `;
 }
@@ -145,8 +145,8 @@ async function submitTemperatureLog(event) {
 
   const body = {
     drone_id: import.meta.env.VITE_DRONE_ID,
-    drone_name: state.config.drone_name,
-    country: state.config.country,
+    drone_name: import.meta.env.VITE_CUSTOM_DRONE_NAME || state.config.drone_name,
+    country:  import.meta.env.VITE_CUSTOM_COUNTRY || state.config.country,
     celsius: temperature
   };
 
