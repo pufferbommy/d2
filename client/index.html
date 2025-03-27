@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vite App</title>
+  <style>
+    * {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    header {
+      padding: 1rem;
+      border-bottom: 2px solid black;
+      background-color: white;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn {
+      border: 2px solid black;
+      color: black;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      box-shadow: 3px 3px hsla(0, 0%, 0%, 1);
+      font-weight: 500;
+      transition: box-shadow 150ms ease-in-out, background-color 150ms;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 6px;
+    }
+    .btn:hover {
+      box-shadow: 1px 1px hsla(0, 0%, 0%, 1);
+    }
+    .btn.btn-primary {
+      background-color: hsl(331, 100%, 95%);
+    }
+    .btn.btn-primary:hover {
+      background-color: hsl(331, 100%, 93%);
+    }
+    .btn.btn-outline {
+      background-color: white;
+    }
+    .btn.btn-outline:hover {
+      background-color: hsla(0, 0%, 0%, 0.05);
+    }
+    #app {
+      padding: 2rem 0;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 1rem;
+    }
+    .card {
+      border: 2px solid black;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-radius: 8px;
+      background: white;
+    }
+    .card .card-title {
+      margin: 0;
+      font-weight: 600;
+    }
+    .card .card-text {
+      margin: 0;
+      color: hsl(0, 0%, 40%);
+    }
+    input {
+      padding: 0.5rem;
+      border: 2px solid black;
+      box-shadow: 3px 3px hsla(0, 0%, 0%, 1);
+      font-size: 1rem;
+      transition: box-shadow 150ms;
+      border-radius: 4px;
+    }
+    input:focus {
+      outline: none;
+      box-shadow: 1px 1px hsla(0, 0%, 0%, 1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: start;
+    }
+    .form-group {
+      display: flex;
+      gap: 0.75rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      background: white;
+    }
+    th, td {
+      border: 2px solid black;
+      padding: 0.75rem;
+    }
+    th {
+      background-color: hsl(331, 100%, 95%);
+      font-weight: 600;
+    } 
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="#" class="btn btn-outline">View Config</a>
+      <a href="#temperature-log-form" class="btn btn-outline">Temperature Log Form</a>
+      <a href="#view-logs" class="btn btn-outline">View Logs</a>
+    </nav>
+  </header>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
